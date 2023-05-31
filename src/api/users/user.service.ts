@@ -15,7 +15,7 @@ class UserService {
     password: string
   ): Promise<string | Error> {
     try {
-      const output = await MySQLConnector.execute(GetUser, [password, email]);
+      const output = await MySQLConnector.execute(GetUser, [email,password]);
       let result = JSON.parse(JSON.stringify(output));
       return result;
     } catch (error) {
