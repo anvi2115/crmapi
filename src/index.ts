@@ -5,7 +5,7 @@ import * as dotenv from 'dotenv'
 dotenv.config()
 const app = new App(
   [new UserController()],
-  3001
+  8080
 );
 
 app.listen();
